@@ -1,0 +1,23 @@
+name: "leaf_service"
+host: "127.0.0.1"
+port: 8060
+log_level: "debug"
+
+mysql:
+  segment_enable: true
+  host: "127.0.0.1"
+  port: 33069
+  user: root
+  password: M0I7N1G5MALL
+  db_name: freemall_leaf
+  table_name: leaf_alloc
+  open_conn: 50
+  idle: 10
+  idle_timeout: 14400
+
+etcd:
+  snowflake_enable: true
+  discovery_enable: false
+  endpoints: ["127.0.0.1:2379"]
+  dial_timeout: 2
+  time_deviation: 50
